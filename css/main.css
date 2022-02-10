@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: #212428;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 5px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+          box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+
+header .header-container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header .header-container .col-2, header .header-container .col-2 {
+  height: 100%;
+}
+
+header .header-container .logo {
+  width: 100%;
+  height: 100%;
+}
+
+header .header-container .logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #c4cfde;
+}
+
+header .header-container .logo span {
+  color: #c4cfde;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+header .header_nave {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .header_nave .navbar {
+  width: 100%;
+}
+
+header .header_nave .navbar .nav {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+header .header_nave .navbar .nav .nav-item {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+header .header_nave .navbar .nav .nav-item .nav-link {
+  color: #c4cfde;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 5px;
+}
+
+header .header_nave .navbar .nav .nav-item .nav-link.active {
+  color: #fff;
+}
+
+header .header_nave .navbar .nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
