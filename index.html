@@ -1,65 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <title>portfile M @ S</title>
 </head>
+
 <body>
     <header>
         <div class="header-container">
-            <!-- start left header -->
-
-
-            <div class="col-lg-2 col-6">
-                <div class="header_left">
-                    <div class="logo">
-                        <img src="img/FB_IMG_1605259511176.jpg" alt = "logo">
-                        <span>MAHMOUDSAEED</span>
-                    </div>
+            <div class="header_left">
+                <div class="logo">
+                    <img src="img/FB_IMG_1605259511176.jpg" alt="logo">
+                    <span>MAHMOUDSAEED</span>
                 </div>
             </div>
-            <!-- end left header -->
-
-            <!-- start right header -->
-            <div class="col-lg-10 col-6">
-                <div class="header_nave">
-                    <nav class="navbar navbar-dark bg-dark">
-                        <ul class="nav justify-content-end">
-                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">PORTFOLIO</a>
-                            </li>
-                            
-                          </ul>
-                      </nav>
+            <div class="header_nave">
+                <nav class="navbar navbar-dark bg-dark">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">skills</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="toggle_menu">
+                <div class="btn_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-
-
-
-            <!-- start right header -->
         </div>
+        <!-- end right header -->
     </header>
+    <!-- end header section -->
+
+    <!-- start nave menu -->
+    <div class="menu_mobil">
+        <div class="menu-header">
+            <div class="logo-menu_btn">
+                <div class="logo_img ">
+                    <img src="img/FB_IMG_1605259511176.jpg">
+                    <span class="log-title"> mahmoudsaeed</span>
+                </div>
+                <div class="close">
+                    <i class="fa-solid fa-xmark close_btn" onclick="display_menu()"></i>
+                </div>
+            </div>
+            <p class="desc-menu">Web designer</p>
+        </div>
+        <div class="menu-nave">
+            <ul class="link_menu">
+                <li><a href="#">home</a></li>
+                <li><a href="#"> about</a></li>
+                <li><a href="#"> contact</a></li>
+                <li><a href="#"> portfolio</a></li>
+                <li><a href="#">skills</a></li>
+            </ul>
+        </div>
+        <div class="footer-menu">
+            <p>contact with me</p>
+            <div class="contact_icon">
+                <a href="#">
+                    <box-icon type='logo' name='facebook-circle' class="icon"></box-icon>
+                </a>
+                <a href="#">
+                    <box-icon name='gmail' type='logo' class="icon"></box-icon>
+                </a>
+                <a href="#">
+                    <box-icon name='twitter' type='logo' class="icon"></box-icon>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end nave menu -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/all.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
