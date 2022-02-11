@@ -1,0 +1,165 @@
+.About_content {
+    width: 1200px;
+    max-width: 100%;
+    height: 400px;
+    margin: 140px auto;
+    display: grid;
+    grid-template-columns: .8fr .8fr;
+    justify-content: space-between;
+    grid-gap: 40px;
+    border-radius: 10px;
+    .img_container {
+        order: 2;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        box-shadow: $shadow-3;
+        border-radius: 10px;
+    }
+    .About_img {
+        width: 100%;
+        height: 100%;
+        box-shadow: $shadow-3;
+        border-radius: 10px;
+        padding: 25px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+.About_data {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr .5fr;
+    grid-gap: 40px;
+    box-shadow: $shadow-3;
+    order: 1;
+    border-radius: 10px;
+    .About_info {
+        padding: 20px 0 0 20px;
+        width: 100%;
+        box-shadow: $shadow-3;
+        .icon_user {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $Main_Span_color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 15px 2px #ff3b77;
+            margin-bottom: 1.5rem;
+        }
+        .box-icon {
+            font-size: 1rem;
+        }
+        h2 {
+            font-family: $font-primary;
+            font-size: 3rem;
+            text-transform: capitalize;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .ainmation_name {
+            text-align: center;
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 50px;
+            ul {
+                width: 100%;
+                position: absolute;
+                list-style: none;
+                margin-top: 0;
+                animation: move_up 5s infinite linear;
+                li {
+                    font-size: 1.5rem;
+                    font-family: $font-primary;
+                    list-style: none;
+                    margin-bottom: 40px;
+                    display: block;
+                    height: 40px;
+                    text-transform: uppercase;
+                    color: $Main_Span_color;
+                    letter-spacing: 1.5px;
+                    font-weight: 600;
+                }
+            }
+        }
+        p {
+            font-size: 1.2rem;
+            font-family: $font-primary;
+            text-transform: capitalize;
+            color: $Main_p_color;
+            letter-spacing: 1px;
+            font-weight: 400;
+            width: 70%;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+.About_cv {
+    box-shadow: $shadow-3;
+    padding: 60px;
+    p {
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: $font-primary;
+        color: $Main_p_color;
+    }
+    .down_contact {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        p {
+            margin-top: 40px;
+            width: 40%;
+            height: 60px;
+            background-color: rgb(20, 20, 20);
+            color: $Main_Span_color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            box-shadow: $shadow-3;
+            cursor: pointer;
+            perspective: 400;
+            a {
+                color: $Main_Span_color;
+                text-decoration: none;
+            }
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+}
+
+// create animation
+@keyframes move_up {
+    0%,
+    100% {
+        transform: transition3d(0, -20px, 0);
+    }
+    20%,
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+    20%,
+    50% {
+        transform: translate3d(0, -80px, 0);
+    }
+    75%,
+    90% {
+        transform: translate3d(0, 0, 0);
+    }
+}
