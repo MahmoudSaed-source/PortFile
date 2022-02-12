@@ -5,9 +5,26 @@
     margin: 140px auto;
     display: grid;
     grid-template-columns: .8fr .8fr;
+    grid-template-rows: 2fr .5fr;
     justify-content: space-between;
     grid-gap: 40px;
     border-radius: 10px;
+    & {
+        @include break_point(mobil) {
+            grid-template-columns: .9fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        @include break_point(medium) {
+            grid-template-columns: .9fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+    }
     .img_container {
         order: 2;
         width: 100%;
@@ -15,6 +32,12 @@
         margin: auto;
         box-shadow: $shadow-3;
         border-radius: 10px;
+        @include break_point(mobil) {
+            order: 1;
+        }
+        @include break_point(medium) {
+            order: 1;
+        }
     }
     .About_img {
         width: 100%;
@@ -33,14 +56,18 @@
 .About_data {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr .5fr;
+    grid-template-rows: 1fr .5fr;
     grid-gap: 40px;
     box-shadow: $shadow-3;
     order: 1;
     border-radius: 10px;
+    @include break_point(mobil) {
+        order: 2;
+    }
+    @include break_point(medium) {
+        order: 2;
+    }
     .About_info {
-        padding: 20px 0 0 20px;
-        width: 100%;
         box-shadow: $shadow-3;
         .icon_user {
             width: 50px;
@@ -52,6 +79,8 @@
             align-items: center;
             box-shadow: 0px 0px 15px 2px #ff3b77;
             margin-bottom: 1.5rem;
+            margin-left: 20px;
+            margin-top: 20px;
         }
         .box-icon {
             font-size: 1rem;
@@ -64,12 +93,20 @@
             margin-bottom: 30px;
         }
         .ainmation_name {
-            text-align: center;
             width: 100%;
             height: 40px;
             overflow: hidden;
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            & {
+                @include break_point (mobil) {
+                    height: 42px;
+                }
+                @include break_point (medium) {
+                    text-align: center;
+                }
+            }
             ul {
                 width: 100%;
                 position: absolute;
@@ -87,6 +124,12 @@
                     color: $Main_Span_color;
                     letter-spacing: 1.5px;
                     font-weight: 600;
+                    & {
+                        @include break_point (mobil) {
+                            font-size: 1rem;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
@@ -99,7 +142,7 @@
             font-weight: 400;
             width: 70%;
             text-align: center;
-            margin: auto;
+            margin: 20px auto;
         }
     }
 }
@@ -119,10 +162,9 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        align-content: center;
         p {
             margin-top: 40px;
-            width: 40%;
+            width: 45%;
             height: 60px;
             background-color: rgb(20, 20, 20);
             color: $Main_Span_color;

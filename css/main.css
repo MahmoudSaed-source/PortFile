@@ -13,7 +13,7 @@ body {
 }
 
 .menu_mobil {
-  width: 300px;
+  width: 350px;
   max-width: 100%;
   height: 100vh;
   background-color: #212529;
@@ -33,6 +33,9 @@ body {
           box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   overflow: auto;
   display: none;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
 }
 
 .menu_mobil.menu_open {
@@ -479,11 +482,45 @@ header .toggle_menu .btn_toggle span {
   display: grid;
   -ms-grid-columns: .8fr .8fr;
       grid-template-columns: .8fr .8fr;
+  -ms-grid-rows: 2fr .5fr;
+      grid-template-rows: 2fr .5fr;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   grid-gap: 40px;
   border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .About_content {
+    -ms-grid-columns: .9fr;
+        grid-template-columns: .9fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .About_content {
+    -ms-grid-columns: .9fr;
+        grid-template-columns: .9fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 100px;
+  }
 }
 
 .About_content .img_container {
@@ -496,6 +533,22 @@ header .toggle_menu .btn_toggle span {
   -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
           box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
   border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .About_content .img_container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .About_content .img_container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .About_content .About_img {
@@ -518,8 +571,8 @@ header .toggle_menu .btn_toggle span {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 2fr .5fr;
-      grid-template-rows: 2fr .5fr;
+  -ms-grid-rows: 1fr .5fr;
+      grid-template-rows: 1fr .5fr;
   grid-gap: 40px;
   -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
           box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
@@ -529,9 +582,23 @@ header .toggle_menu .btn_toggle span {
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  .About_data {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .About_data {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .About_data .About_info {
-  padding: 20px 0 0 20px;
-  width: 100%;
   -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
           box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
 }
@@ -553,6 +620,8 @@ header .toggle_menu .btn_toggle span {
   -webkit-box-shadow: 0px 0px 15px 2px #ff3b77;
           box-shadow: 0px 0px 15px 2px #ff3b77;
   margin-bottom: 1.5rem;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .About_data .About_info .box-icon {
@@ -568,12 +637,24 @@ header .toggle_menu .btn_toggle span {
 }
 
 .About_data .About_info .ainmation_name {
-  text-align: center;
   width: 100%;
   height: 40px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .About_data .About_info .ainmation_name {
+    height: 42px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .About_data .About_info .ainmation_name {
+    text-align: center;
+  }
 }
 
 .About_data .About_info .ainmation_name ul {
@@ -598,6 +679,13 @@ header .toggle_menu .btn_toggle span {
   font-weight: 600;
 }
 
+@media (max-width: 767px) {
+  .About_data .About_info .ainmation_name ul li {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 .About_data .About_info p {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
@@ -607,7 +695,7 @@ header .toggle_menu .btn_toggle span {
   font-weight: 400;
   width: 70%;
   text-align: center;
-  margin: auto;
+  margin: 20px auto;
 }
 
 .About_cv {
@@ -634,13 +722,11 @@ header .toggle_menu .btn_toggle span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .About_cv .down_contact p {
   margin-top: 40px;
-  width: 40%;
+  width: 45%;
   height: 60px;
   background-color: #141414;
   color: #ff014f;
