@@ -1,7 +1,6 @@
 //  start nave-menu
 .menu_mobil {
-    width: 350px;
-    max-width: 100%;
+    width: 0px;
     height: 100vh;
     background-color: $menu_nave_bg;
     position: relative;
@@ -10,13 +9,15 @@
     justify-content: space-between;
     position: relative;
     box-shadow: $inner-shadow;
-    overflow: auto;
-    display: none;
+    overflow: hidden;
     position: fixed;
     top: 0;
     z-index: 2000;
+    transition: width .5s linear;
     &.menu_open {
-        display: block;
+        width: 350px;
+        max-width: 100%;
+        transition: width .5s linear;
     }
     .menu-header {
         display: flex;

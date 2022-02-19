@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -41,8 +42,7 @@ body {
 }
 
 .menu_mobil {
-  width: 350px;
-  max-width: 100%;
+  width: 0px;
   height: 100vh;
   background-color: #212529;
   position: relative;
@@ -59,15 +59,19 @@ body {
   position: relative;
   -webkit-box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
           box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
-  overflow: auto;
-  display: none;
+  overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 2000;
+  -webkit-transition: width .5s linear;
+  transition: width .5s linear;
 }
 
 .menu_mobil.menu_open {
-  display: block;
+  width: 350px;
+  max-width: 100%;
+  -webkit-transition: width .5s linear;
+  transition: width .5s linear;
 }
 
 .menu_mobil .menu-header {
@@ -981,10 +985,294 @@ header .toggle_menu .btn_toggle span {
   }
 }
 
+.portfolio {
+  width: 1200px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 150px auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (0.6fr)[4];
+      grid-template-rows: repeat(4, 0.6fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      grid-template-areas: "title title title" "project1 project2 project3" "project4 project5 project6" "bol bol bol";
+  grid-gap: 2rem;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    margin: 30px auto;
+    -ms-grid-columns: .8fr;
+        grid-template-columns: .8fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "title" " active_project" "bol";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio {
+    margin: 30px auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 2fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: "title" " active_project" "bol";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.portfolio .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 50px;
+  color: #9da6b2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-shadow: 0px -4px 1px black, 1px 2px 0px #000;
+  text-transform: uppercase;
+  letter-spacing: 9.3px;
+}
+
+.portfolio .title span {
+  color: #c90a45;
+}
+
+@media (max-width: 767px) {
+  .portfolio .title {
+    font-size: 40px;
+  }
+}
+
+.portfolio > div {
+  max-width: 100%;
+  height: 550px;
+  max-height: 550px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
+          box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .portfolio > div {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio > div {
+    display: none;
+  }
+}
+
+.portfolio > div.active_project {
+  grid-area: active_project;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .portfolio > div.active_project {
+    display: none;
+  }
+}
+
+@media (min-width: 1199px) {
+  .portfolio > div.active_project {
+    display: none;
+  }
+}
+
+.portfolio > div .name_project {
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: #9da6b2;
+}
+
+.portfolio > div .project-img {
+  width: 100%;
+  height: 300px;
+  -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
+          box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
+  margin-bottom: 2rem;
+}
+
+.portfolio > div .project-img img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+
+.portfolio > div p {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #7e848f;
+}
+
+.portfolio > div h4 {
+  width: 70%;
+  height: 30px;
+  -webkit-box-shadow: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+          box-shadow: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+  background-color: #191b1f;
+}
+
+.portfolio > div h4 a {
+  text-decoration: none;
+  color: #c90a45;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.portfolio > div h4 a:hover {
+  letter-spacing: 2px;
+}
+
+.portfolio .project1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: project1;
+}
+
+.portfolio .project2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: project2;
+}
+
+.portfolio .project3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: project3;
+}
+
+.portfolio .project4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: project4;
+}
+
+.portfolio .project5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: project5;
+}
+
+.portfolio .project6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: project6;
+}
+
+.portfolio .bolets {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: bol;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  margin-top: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: none;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .portfolio .bolets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .bolets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.portfolio .bolets > div {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
+          box-shadow: 1px -1px 6px #000, -1px -1px 6px #000;
+  cursor: pointer;
+}
+
+.portfolio .bolets > div.active_bol {
+  background-color: #c90a45;
+}
+
 .skills_content {
   width: 1200px;
-  height: 800px;
   max-width: 100%;
+  max-height: 100%;
   margin: -130px auto;
   padding: 0;
   display: -ms-grid;
@@ -994,15 +1282,15 @@ header .toggle_menu .btn_toggle span {
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
       grid-template-areas: "head head head" "html css javascript" "ss bootstrap github";
-  grid-gap: 6rem;
+  grid-gap: 2rem 6rem;
   padding: 0 40px;
 }
 
 @media (max-width: 767px) {
   .skills_content {
     margin: 30px auto;
-    -ms-grid-columns: .9fr;
-        grid-template-columns: .9fr;
+    -ms-grid-columns: .8fr;
+        grid-template-columns: .8fr;
     -ms-grid-rows: 2fr;
         grid-template-rows: 2fr;
         grid-template-areas: "head" "html" "css" "javascript" "ss" "bootstrap" "github";

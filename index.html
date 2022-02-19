@@ -35,28 +35,26 @@
                 <nav class="navbar navbar-dark bg-dark">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">home</a>
+                            <a class="nav-link active" aria-current="page" href="#About_content">home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#skills_content">skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#portfolio">PORTFOLIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">PORTFOLIO</a>
+                            <a class="nav-link" href="#">contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">skills</a>
-                        </li>
+
                     </ul>
                 </nav>
             </div>
             <div class="toggle_menu">
                 <div class="btn_toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="open"></span>
+                    <span class="open"></span>
+                    <span class="open"></span>
                 </div>
             </div>
         </div>
@@ -73,18 +71,18 @@
                     <span class="log-title"> mahmoudsaeed</span>
                 </div>
                 <div class="close">
-                    <i class="fa-solid fa-xmark close_btn" onclick="display_menu()"></i>
+                    <i class="fa-solid fa-xmark close_btn" onclick="closeMenu()"></i>
                 </div>
             </div>
             <p class="desc-menu">Web designer</p>
         </div>
         <div class="menu-nave">
             <ul class="link_menu">
-                <li><a href="#">home</a></li>
-                <li><a href="#"> about</a></li>
+                <li><a href="#About_content">home</a></li>
+                <li><a href="#skills_content"> skills</a></li>
+                <li><a href="#portfolio"> portfolio</a></li>
                 <li><a href="#"> contact</a></li>
-                <li><a href="#"> portfolio</a></li>
-                <li><a href="#">skills</a></li>
+
             </ul>
         </div>
         <div class="footer-menu">
@@ -110,9 +108,9 @@
     </div>
     <!-- end button scroll -->
 
-    <!-- start about us  -->
+    <!-- start home us  -->
 
-    <section class="About_content">
+    <section class="About_content" id="About_content">
         <div class="img_container">
             <div class="About_img">
                 <img src="img/FB_IMG_1605259511176.jpg">
@@ -148,7 +146,7 @@
 
     <!-- start skills section -->
 
-    <div class="skills_content">
+    <div class="skills_content" id="skills_content">
         <h2 class="title">
             &lt;skills<span>/</span>&gt;
         </h2>
@@ -282,11 +280,96 @@
         </div>
 
     </div>
-
-
-
     <!-- end skills section -->
 
+    <!-- start portfolio  -->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="title">
+            &lt;portfolio<span>/</span>&gt;
+        </h2>
+
+
+        <div class="project1  " data-number="1">
+            <h2 class=" name_project">project1</h2>
+            <div class="project-img">
+                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+
+        <div class="project2" data-number="2">
+            <h2 class=" name_project">dream company</h2>
+            <div class="project-img">
+                <img src="img/dreamcompany.png" alt="">
+            </div>
+            <p>this template form elzero web school it is company websit </p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+
+
+        <div class="project3" data-number="3">
+            <h2 class=" name_project">project3</h2>
+            <div class="project-img">
+                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+
+
+        <div class="project4" data-number="4">
+            <h2 class=" name_project">project4</h2>
+            <div class="project-img">
+                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+
+
+        <div class="project5" data-number="5">
+            <h2 class=" name_project">project5</h2>
+            <div class="project-img">
+                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+
+
+        <div class="project6" data-number="6">
+            <h2 class=" name_project">project6</h2>
+            <div class="project-img">
+                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+        <div class="active_project" data-number="7">
+            <h2 class=" name_project">active project</h2>
+            <div class="project-img">
+                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, ad</p>
+            <h4><a href="#">click her</a></h4>
+        </div>
+
+        <div class="bolets">
+            <div class="Bolet_1 " data-id='1'></div>
+            <div class="Bolet_2" data-id='2'></div>
+            <div class="Bolet_3" data-id='3'></div>
+            <div class="Bolet_4" data-id='4'></div>
+            <div class="Bolet_5" data-id='5'></div>
+            <div class="Bolet_6" data-id='6'></div>
+            <div class="Bolet_7 active_bol" data-id='7'></div>
+        </div>
+
+    </section>
+
+
+    <!-- end portfolio  -->
 
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <script src="js/bootstrap.js"></script>
