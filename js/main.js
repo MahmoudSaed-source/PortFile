@@ -130,7 +130,6 @@ bolets.forEach((el) => {
             if (el.dataset.id == Elemn.dataset.number) {
                 portfolio.forEach((pro) => {
                     pro.classList.remove("active_project");
-
                 })
                 Elemn.classList.add("active_project");
 

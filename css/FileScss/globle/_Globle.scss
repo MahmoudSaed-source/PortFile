@@ -3,13 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 body {
     background-color: $Main_bg-color;
     color: #fff;
     position: relative;
-    height: 2000px;
+    height: 4000px;
 }
 
 .up_top {

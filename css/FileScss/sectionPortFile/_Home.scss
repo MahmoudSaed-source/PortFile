@@ -1,6 +1,7 @@
 .About_content {
     width: 1200px;
     max-width: 100%;
+    max-height: 70%;
     margin: 140px auto 0px auto;
     display: grid;
     grid-template-columns: .8fr .8fr;
@@ -125,8 +126,10 @@
                     font-weight: 600;
                     & {
                         @include break_point (mobil) {
-                            font-size: 1rem;
+                            font-size: 1.1rem;
                             text-align: center;
+                            letter-spacing: .5px;
+                            font-weight: bold;
                         }
                     }
                 }

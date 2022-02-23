@@ -1,16 +1,15 @@
 .portfolio {
     width: 1200px;
     max-width: 100%;
-    max-height: 100%;
-    margin: 150px auto;
+    max-height: 70%;
+    margin: 150px auto 20px;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, .6fr);
+    grid-template-rows: repeat(3, .6fr);
     justify-content: space-between;
-    grid-template-areas: "title title title" "project1 project2 project3" "project4 project5 project6" "bol bol bol";
+    grid-template-areas: "title title title" "project1 project2 project3" "project4 project5 project6";
     grid-gap: 2rem;
-    padding: 0 20px;
     & {
         @include break_point(mobil) {
             margin: 30px auto;
@@ -55,7 +54,7 @@
         padding: 20px;
         text-align: center;
         font-size: 20px;
-        box-shadow: $shadow-3;
+        box-shadow: $shadow-3, $shadow-2;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -74,6 +73,12 @@
             display: flex;
             max-width: 100%;
             & {
+                @include break_point(mobil) {
+                    width: 80%;
+                }
+                @include break_point(medium) {
+                    width: 65%;
+                }
                 @include break_point(large) {
                     display: none;
                 }
@@ -157,9 +162,11 @@
         & {
             @include break_point(mobil) {
                 display: flex;
+                width: 80%;
             }
             @include break_point(medium) {
                 display: flex;
+                width: 60%;
             }
         }
         &>div {
@@ -170,6 +177,13 @@
             cursor: pointer;
             &.active_bol {
                 background-color: $main_color_text_btn;
+            }
+            & {
+                @include break_point(mobil) {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                }
             }
         }
     }
