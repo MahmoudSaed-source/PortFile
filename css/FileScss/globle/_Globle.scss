@@ -1,4 +1,4 @@
-* {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,25 +10,22 @@ body {
     background-color: $Main_bg-color;
     color: #fff;
     position: relative;
-    height: 4000px;
-}
-
-.up_top {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-color: $Main_bg-color;
-    box-shadow: $shadow-3;
-    color: #fff;
-    position: fixed;
-    right: 10px;
-    bottom: 20px;
-    cursor: pointer;
-    display: none;
-    text-align: center;
-    padding: 10px;
-}
+    .up_top {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: $Main_bg-color;
+        box-shadow: $shadow-3;
+        color: #fff;
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        cursor: pointer;
+        display: none;
+        text-align: center;
+        padding: 10px;
+    }

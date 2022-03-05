@@ -66,6 +66,11 @@ document.addEventListener("click", (e) => {
 
 
 //   start scroll top
+
+let skills_section = document.querySelector("#skills_content");
+let portfolio_section = document.querySelector("#portfolio");
+
+
 window.onscroll = function() { Scroll_top() };
 
 function Scroll_top() {
@@ -75,7 +80,20 @@ function Scroll_top() {
     } else {
         Btn_scroll.style.display = "none"
     }
+
 }
+
+
+
+
+// // ده لمعرفه المساحه الموجوده فوق الغنصر
+// let section_top = element.offsetTop;
+// // ده لمعرفه مساحه العنصر نفسه مع margin , padding
+// let section_height = element.offsetHeight;
+// // ده لمعرفه مساحه الشاشه باكملها
+// let window_height = window.innerHeight;
+// // ده لمعرفه المساحه التى تم عمل لها scroll
+// let window_scroll = window.pageYOffset;
 
 
 // button scroll to
@@ -139,5 +157,29 @@ bolets.forEach((el) => {
 
 })
 
+let projects = document.querySelectorAll("#projects");
+
+
+function display_projects() {
+    let counter = 0;
+    let display_data = setInterval(() => {
+        projects.forEach((pro) => {
+            pro.classList.remove("active_project");
+        })
+        projects[counter].classList.add("active_project");
+        counter++;
+
+        if (counter == projects.length) {
+            clearInterval(display_data);
+            display_projects();
+        }
+
+    }, 2000)
+
+}
+// paly this function in large screen
+if (window.innerWidth < 991) {
+    display_projects();
+}
 
 // end portfolio in mobil media

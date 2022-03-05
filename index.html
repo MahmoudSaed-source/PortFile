@@ -15,7 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -44,7 +46,7 @@
                             <a class="nav-link" href="#portfolio">PORTFOLIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">contact</a>
+                            <a class="nav-link" href="#contact">contact</a>
                         </li>
 
                     </ul>
@@ -81,7 +83,7 @@
                 <li><a href="#About_content">home</a></li>
                 <li><a href="#skills_content"> skills</a></li>
                 <li><a href="#portfolio"> portfolio</a></li>
-                <li><a href="#"> contact</a></li>
+                <li><a href="#contact"> contact</a></li>
 
             </ul>
         </div>
@@ -146,11 +148,11 @@
 
     <!-- start skills section -->
 
-    <div class="skills_content" id="skills_content">
-        <h2 class="title">
+    <div class="skills_content " id="skills_content">
+        <h2 class="title wow animate__jello">
             &lt;skills<span>/</span>&gt;
         </h2>
-        <div class="skill_html">
+        <div class="skill_html wow animate__backInRight" data-wow-duration="2s" data-wow-delay=".1s">
             <div class="title_skill">
                 <p><i class="fa-brands fa-html5"></i></p>
                 <h2>html</h2>
@@ -172,7 +174,7 @@
                 </div>
             </div>
         </div>
-        <div class="skill_css">
+        <div class="skill_css wow animate__backInRight" data-wow-duration="2s" data-wow-delay=".2s">
             <div class="title_skill">
                 <p><i class="fa-brands fa-css3"></i></p>
                 <h2>css</h2>
@@ -193,7 +195,7 @@
                 </div>
             </div>
         </div>
-        <div class="skill_js">
+        <div class="skill_js wow animate__backInRight" data-wow-duration="2s" data-wow-delay=".3s">
             <div class="title_skill">
                 <p><i class="fa-brands fa-js"></i></p>
                 <h2>javascript</h2>
@@ -214,7 +216,7 @@
                 </div>
             </div>
         </div>
-        <div class="skill_sass">
+        <div class="skill_sass wow animate__backInRight" data-wow-duration="2s" data-wow-delay=".4s">
             <div class="title_skill">
                 <p><i class="fa-brands fa-sass"></i></p>
                 <h2>sass</h2>
@@ -236,8 +238,8 @@
             </div>
         </div>
 
-        <div class="skill_BS">
-            <div class="title_skill">
+        <div class="skill_BS wow animate__backInRight" data-wow-duration="2s" data-wow-delay=".5s">
+            <div class="title_skill ">
                 <p><i class="fa-brands fa-bootstrap"></i></p>
                 <h2>bootstrap</h2>
             </div>
@@ -257,7 +259,7 @@
                 </div>
             </div>
         </div>
-        <div class="skill_Gh">
+        <div class="skill_Gh wow animate__backInRight" data-wow-duration="2s" data-wow-delay=".6s">
             <div class="title_skill">
                 <p><i class="fa-brands fa-github"></i></p>
                 <h2>github</h2>
@@ -284,22 +286,20 @@
 
     <!-- start portfolio  -->
 
-    <section class="portfolio" id="portfolio">
-        <h2 class="title">
+    <section class="portfolio wow animate__slideInRight" data-wow-duration="2s" id="portfolio">
+        <h2 class="title wow animate__jello">
             &lt;portfolio<span>/</span>&gt;
         </h2>
-
-
-        <div class="project1  " data-number="1">
+        <div class="project1  " id="projects" data-number="1">
             <h2 class=" name_project">project1</h2>
             <div class="project-img">
-                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+                <img src="img/001.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, ad</p>
             <h4><a href="#">click her</a></h4>
         </div>
 
-        <div class="project2" data-number="2">
+        <div class="project2" id="projects" data-number="2">
             <h2 class=" name_project">dream company</h2>
             <div class="project-img">
                 <img src="img/dreamcompany.png" alt="">
@@ -309,48 +309,48 @@
         </div>
 
 
-        <div class="project3" data-number="3">
+        <div class="project3" id="projects" data-number="3">
             <h2 class=" name_project">project3</h2>
             <div class="project-img">
-                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+                <img src="img/001.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, ad</p>
             <h4><a href="#">click her</a></h4>
         </div>
 
 
-        <div class="project4" data-number="4">
+        <div class="project4" id="projects" data-number="4">
             <h2 class=" name_project">project4</h2>
             <div class="project-img">
-                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+                <img src="img/001.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, ad</p>
             <h4><a href="#">click her</a></h4>
         </div>
 
 
-        <div class="project5" data-number="5">
+        <div class="project5" id="projects" data-number="5">
             <h2 class=" name_project">project5</h2>
             <div class="project-img">
-                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+                <img src="img/001.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, ad</p>
             <h4><a href="#">click her</a></h4>
         </div>
 
 
-        <div class="project6" data-number="6">
+        <div class="project6 " id="projects" data-number="6">
             <h2 class=" name_project">project6</h2>
             <div class="project-img">
-                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+                <img src="img/001.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, ad</p>
             <h4><a href="#">click her</a></h4>
         </div>
-        <div class="active_project" data-number="7">
+        <div class="active_project wow animate__slideInRight" id="projects" data-number="7">
             <h2 class=" name_project">active project</h2>
             <div class="project-img">
-                <img src="img/FB_IMG_1605259511176.jpg" alt="">
+                <img src="img/001.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur, ad</p>
             <h4><a href="#">click her</a></h4>
@@ -368,8 +368,8 @@
     </section>
     <!-- end portfolio  -->
 
-    <section class="contact">
-        <h2 class="title"> &lt;contact<span>/</span>&gt;</h2>
+    <section class="contact wow animate__backInRight" id="contact">
+        <h2 class="title wow animate__jello"> &lt;contact<span>/</span>&gt;</h2>
         <div class="contact_form">
             <form action="">
                 <input type="text" placeholder="YOurName">
@@ -385,7 +385,11 @@
             </h3>
             <div class="phon">
                 <span class="icon"><box-icon name='phone'></box-icon></span>
-                <span class="content">01010978391  <span>&</span> 01142974302</span>
+                <span class="content">01010978391  </span>
+            </div>
+            <div class="phon">
+                <span class="icon"><box-icon name='phone'></box-icon></span>
+                <span class="content"> 01142974302</span>
             </div>
             <div class="mail">
                 <span class="icon"><box-icon type='logo' name='gmail'></box-icon></span>
@@ -413,9 +417,14 @@
     </section>
 
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+
+    <script src="js/wow.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/all.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

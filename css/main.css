@@ -61,8 +61,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  -webkit-box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
-          box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+  -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+          box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -426,8 +426,8 @@ header {
   top: 0px;
   height: 80px;
   padding: 0;
-  -webkit-box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-          box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+          box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
   background-color: #212428;
 }
 
@@ -457,6 +457,7 @@ header .header-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  z-index: 10000;
 }
 
 header .header-container .header_left {
@@ -474,6 +475,7 @@ header .header-container .header_left {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  background-color: #212529;
 }
 
 @media (max-width: 767px) {
@@ -995,7 +997,6 @@ header .toggle_menu .btn_toggle span {
 .contact {
   width: 1200px;
   max-width: 100%;
-  height: 250px;
   margin: 0 auto;
   padding: 0px;
   display: -ms-grid;
@@ -1024,7 +1025,7 @@ header .toggle_menu .btn_toggle span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 300px;
+    margin: 30px auto;
   }
 }
 
@@ -1081,7 +1082,6 @@ header .toggle_menu .btn_toggle span {
   padding: 10px;
   -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
           box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
-  height: 97%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1090,6 +1090,14 @@ header .toggle_menu .btn_toggle span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 767px) {
+  .contact .contact_form {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
 }
 
 .contact .contact_form form {
@@ -1212,7 +1220,6 @@ header .toggle_menu .btn_toggle span {
   padding: 30px;
   -webkit-box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
           box-shadow: 1px -1px 6px #000, -1px -1px 6px #000, inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
-  height: 97%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1220,12 +1227,20 @@ header .toggle_menu .btn_toggle span {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  .contact .contact_option {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
 }
 
 .contact .contact_option h3 {
@@ -1284,29 +1299,24 @@ header .toggle_menu .btn_toggle span {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   color: #7e848f;
+  letter-spacing: 4px;
 }
 
-.contact .contact_option .phon .content span,
-.contact .contact_option .mail .content span {
-  color: #ff3b77;
+@media (max-width: 767px) {
+  .contact .contact_option .phon .content,
+  .contact .contact_option .mail .content {
+    letter-spacing: 0px;
+    word-break: break-all;
+  }
 }
 
 .contact .contact_option .footer-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -ms-flex-item-align: center;
       align-self: center;
 }
